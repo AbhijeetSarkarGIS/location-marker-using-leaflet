@@ -1,0 +1,74 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+crossorigin=""/>
+
+<title>PCA2 (PGGI-194) Assignment: Marker using Leaflet Visiting spots in Kolkata and Howrah.</title>
+<link rel="icon" type="image/x-icon" href="https://i.postimg.cc/wMwmczB0/Blue-Marker-Favicon-Go-Go-Reno-220x165.jpg">
+<meta property="og:title" content="PCA2 PGGI-194 Assignment: Marker using Leaflet Visiting spots in Kolkata and Howrah." />
+<meta property="og:description" content="Marker using Leaflet that will locate the 5 visiting spots in Kolkata and Howrah." />
+<meta property="og:image" content="https://i.postimg.cc/bYD3yFsk/leaftassignment.png" />
+<style>
+#map {
+height: 100vh;
+width: 100vw;
+}
+</style>
+</head>
+<body>
+<h2>PCA2 PGGI-194 Assignment: Marker using Leaflet Visiting spots in Kolkata and Howrah.</h2>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+crossorigin=""/>
+</script>
+<script>
+var map = L.map("map").setView([22.54501, 88.34257], 12);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+attribution:
+'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var marker = L.marker([22.654866049065774, 88.35753781780738]).addTo(map);
+marker.bindPopup("<b>Dakhineswar Temple</b>")
+var circle = L.circle([22.654866049065774, 88.35753781780738], {
+color: "purple",
+fillColor: "purple",
+fillOpacity: 0.5,  //The fill-opacity attribute is a presentation attribute defining the opacity of the paint server (color, gradient, pattern, etc.) applied to a shape. //
+radius: 50,
+}).addTo(map);
+var marker = L.marker([22.564726517789822, 88.34326080053285]).addTo(map);
+marker.bindPopup("<b>Eden Gardens</b>")
+var circle = L.circle([22.564726517789822, 88.34326080053285], {
+color: "purple",
+fillColor: "purple",
+fillOpacity: 0.5,
+radius: 150,
+}).addTo(map);
+var marker = L.marker([22.570975955807114, 88.4216296849267]).addTo(map);
+marker.bindPopup("<b>Nicco Park</b>")
+var circle = L.circle([22.570975955807114, 88.4216296849267], {
+color: "purple",
+fillColor: "purple",
+fillOpacity: 0.5,
+radius: 130,
+}).addTo(map);
+var marker = L.marker([22.632415255745357, 88.3564145027558]).addTo(map);
+marker.bindPopup("<b>Belur Math</b>")
+var circle = L.circle([22.632415255745357, 88.3564145027558], {
+color: "purple",
+fillColor: "purple",
+fillOpacity: 0.5,
+radius: 100,
+}).addTo(map);
+var marker = L.marker([22.558119807418905, 88.29130802198222]).addTo(map);
+marker.bindPopup("<b>Botanical Garden</b>")
+var circle = L.circle([22.558119807418905, 88.29130802198222], {
+color: "purple",
+fillColor: "purple",
+fillOpacity: 0.5,
+radius: 400,
+}).addTo(map);
+</script>
+</body>
+</html>
